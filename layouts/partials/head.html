@@ -71,8 +71,13 @@
 <link rel="mask-icon" href="{{ .Site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL }}">
 <meta name="theme-color" content="{{ .Site.Params.assets.theme_color | default "#2e2e33" }}">
 <meta name="msapplication-TileColor" content="{{ .Site.Params.assets.msapplication_TileColor | default "#2e2e33" }}">
-
-{{- partial "scripts.html" . -}}
+<script>
+  document.documentElement.setAttribute('data-theme', 'dark'); // default theme is dark
+  let theme = localStorage.getItem('data-theme');
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+</script>
 
 {{- /* Generator */}}
 {{ hugo.Generator }}
