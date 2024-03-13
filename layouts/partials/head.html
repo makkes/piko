@@ -72,6 +72,8 @@
 <meta name="theme-color" content="{{ .Site.Params.assets.theme_color | default "#2e2e33" }}">
 <meta name="msapplication-TileColor" content="{{ .Site.Params.assets.msapplication_TileColor | default "#2e2e33" }}">
 
+{{- partial "scripts.html" . -}}
+
 {{- /* Generator */}}
 {{ hugo.Generator }}
 
