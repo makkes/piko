@@ -1,14 +1,7 @@
 {{- if not (.Param "hideFooter") }}
-<footer class="text-center">
-    {{- if .Site.Copyright }}
-    <span>{{ .Site.Copyright | markdownify }} &copy; {{ now.Format "2006"}} {{ .Site.Title }}</span>
-    {{- else }}
-    <span>&copy; {{ now.Format "2006"}} <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></span>
-    {{- end }}
+<footer class="text-right">
     <div>
-        <a href="{{ "/legal/privacy" | absLangURL }}">Privacy Policy</a> 
-        <span>&</span>
-        <a href="{{ "/legal/terms-and-conditions" | absLangURL }}">Terms and Conditions</a>
+        <a href="{{ "/imprint" | absLangURL }}">Imprint/Legal Notice</a> 
     </div>
 </footer>
 {{- end }}

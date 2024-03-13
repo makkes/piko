@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="container team">
+    <hgroup>
+        {{ partial "breadcrumbs.html" . }}
+        <h1>{{ .Title }}</h1>
+        <h2>{{ .Description }}</h2>
+    </hgroup>
+
+    {{ .Content }}
+    <div
+        class="{{ if lt (.Params.members | len) 2}}{{ else }}grid {{ if eq (.Params.members | len) 2 }}grid-2{{ end }}{{ end }}">
+        <!-- add 'grid' class as soon as more than 1 member will appear here -->
+        {{ range .Params.members }}
+        <div class="member text-center">
+            <img src="{{.photo | absURL }}" layout="responsive"></img>
+            <div style="font-weight:bold;">{{.name}}</div>
+            <div>{{.about}}</div>
+            {{- if .linkedin }}<a href="{{.linkedin}}"><i data-feather="linkedin"></i></a>{{- end }}
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
