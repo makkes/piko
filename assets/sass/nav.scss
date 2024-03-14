@@ -4,11 +4,13 @@
     display: none;
   }
 }
+
 @media (min-width: 0px) and (max-width: 400px) {
   nav.desktop {
     padding: 0 0.25rem;
   }
 }
+
 @media (min-width: 0px) and (max-width: 576px) {
   .desktop-navigation {
     display: none;
@@ -20,6 +22,7 @@
     display: none;
   }
 }
+
 nav button,
 nav button:hover,
 nav button:active,
@@ -32,7 +35,7 @@ nav button:focus {
 }
 
 // Fixed navbar
-body > nav {
+body>nav {
   z-index: 99;
   position: fixed;
   top: 0;
@@ -51,11 +54,17 @@ nav {
   span {
     padding: 0.225rem 0;
   }
+
   &.desktop {
     background-color: var(--background-color);
   }
+
   .menu-active {
     border-bottom: 5px var(--primary) solid;
+  }
+
+  a:focus {
+    background-color: transparent;
   }
 }
 
@@ -66,6 +75,7 @@ nav {
   background-color: var(--background-color);
   box-shadow: var(--card-box-shadow);
   min-width: 100%;
+
   button {
     position: absolute;
     top: var(--spacing);
@@ -85,7 +95,7 @@ nav {
   }
 }
 
-.mobile-navigation > li > button > svg {
+.mobile-navigation>li>button>svg {
   width: 30px;
   height: 30px;
   color: var(--contrast);
@@ -93,7 +103,7 @@ nav {
 
 // Icons
 .sidebar,
-body > nav {
+body>nav {
   svg {
     height: 1rem;
   }

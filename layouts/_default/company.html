@@ -14,6 +14,7 @@
         <div class="member text-center">
             <img src="{{.photo | absURL }}" layout="responsive"></img>
             <div style="font-weight:bold;">{{.name}}</div>
+            <div style="text-decoration: underline;">{{.role}}</div>
             <div>{{.about}}</div>
             {{- if .linkedin }}<a href="{{.linkedin}}"><i data-feather="linkedin"></i></a>{{- end }}
         </div>
