@@ -63,9 +63,10 @@ nav {
     border-bottom: 5px var(--primary) solid;
   }
 
-  a:focus {
-    background-color: transparent;
-  }
+}
+
+a:focus {
+  background-color: transparent;
 }
 
 // Sidebar
