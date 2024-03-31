@@ -8,6 +8,7 @@
   #lightMainIcon {
     display: none;
   }
+
   :root {
     --muted-color: #8fa3b1 !important;
     --link-color: #4c82a8 !important;
@@ -377,4 +378,5 @@ a[role='button'],
 
 footer {
   padding: var(--spacing) !important;
+  font-size: 0.75rem;
 }
