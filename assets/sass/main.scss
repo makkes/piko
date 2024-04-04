@@ -47,6 +47,10 @@ body {
   background-size: cover;
   min-height: 50vh;
 
+  h1 {
+    letter-spacing: -0.2rem;
+  }
+
   h1,
   a[role='button'].outline.contrast {
     color: #edf0f3;
