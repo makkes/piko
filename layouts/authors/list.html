@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div class="container">
+
+<h1>Articles by {{ .Params.name }}</h1>
+
+<ul>
+{{ range .Pages }}
+    <li>
+        {{- if not .Date.IsZero -}}
+            <time datetime="{{ .Date }}">{{ (.Date.Format (default "January 2, 2006" .Site.Params.DateFormat)) }}</time>: 
+        {{- end }}
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+{{ end }}
+</ul>
+
+</div>
+
+{{ end }}

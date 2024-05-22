@@ -20,25 +20,26 @@
         </article>
       {{- end }}
       
-      {{if .Params.Cover.Image }}<img
-        class="cover"
-        src="{{.Params.Cover.Image | absURL}}"
-        width="600"
-        height="400"
-        align="left"
-        layout="responsive"
-      >
-      </img
-      >{{end}}
+      {{if .Params.Cover.Image }}
+        <div class="cover">
+          <img
+            src="{{.Params.Cover.Image | absURL}}"
+            layout="responsive"
+          >
+          <span class="caption">{{.Params.Cover.Caption | markdownify }}</span>
+        </img>
+        </div>
+      {{end}}
     
       <div class="post">
-        
-        {{ partial "social-share.html" . }} {{- if not (.Param
+        {{- if not (.Param
         "disableAnchoredHeadings") }} {{- partial "anchored_headings.html"
         .Content -}} {{- else }}{{ .Content }}{{ end }}
       </div>
 
+      {{- if (.Param "ShowShareButtons") }}
       {{ partial "social-share.html" . }}
+      {{ end }}
     </div>
     
     {{- if (.Param "ShowRelated") }} 

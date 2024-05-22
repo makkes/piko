@@ -41,6 +41,10 @@ body {
 }
 
 .hero {
+  &.list {
+    --spacing-hero: 1rem;
+    min-height: 10vh;
+  }
   background-color: #394046;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,6 +83,12 @@ header {
 
   img {
     margin-right: 0.5em;
+  }
+}
+
+.authors {
+  a:not(:last-child)::after {
+    content: ', ';
   }
 }
 
@@ -210,11 +220,13 @@ a {
 }
 
 .cover {
-  float: left;
-  margin: 0 20px 0 0;
-  width: 300px;
-  max-width: 100%;
-  pointer-events: none;
+  img {
+    margin: 0 20px 0 0;
+    width: 100%;
+    max-width: 100%;
+    pointer-events: none;
+  }
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 0px) and (max-width: 576px) {

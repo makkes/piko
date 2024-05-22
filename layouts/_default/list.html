@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="hero" style="background-image:linear-gradient(rgba(20,30,38, 0.9), rgba(24,44,54, 0.8)),
+<section class="hero list" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 url('{{.Params.Image}}');">
   <header class="container">
     <hgroup>
@@ -34,13 +34,7 @@ url('{{.Params.Image}}');">
         {{end}}
         <hgroup>
           <h3>{{ .Title }}</h3>
-          <hr />
-          <p>
-            {{ .Description | plainify | htmlUnescape | truncate 100 }}{{ if
-            .Truncated }}...{{ end }}
-          </p>
         </hgroup>
-        <small> {{- partial "post_meta.html" . -}} </small>
       </article>
     </a>
     {{ end }}
