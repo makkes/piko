@@ -16,7 +16,14 @@
             <div style="font-weight:bold;">{{.name}}</div>
             <div style="text-decoration: underline;">{{.role}}</div>
             <div>{{.about}}</div>
-            {{- if .linkedin }}<a href="{{.linkedin}}"><i data-feather="linkedin"></i></a>{{- end }}
+            <br />
+            {{- if .posts_slug }}<div>Find all articles by {{.name}} <a href="/authors/{{.posts_slug}}">here.</a></div>{{- end }}
+            <br />
+            <div>
+                {{- if .linkedin }}<a href="{{.linkedin}}"><i data-feather="linkedin"></i></a>{{- end -}}
+                <span style="margin-left:.5em; margin-right:.5em;">&middot;</span>
+                {{- if .github }}<a href="https://github.com/{{.github}}"><i data-feather="github"></i></a>{{- end }}
+            </div>
         </div>
         {{ end }}
     </div>
