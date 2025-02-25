@@ -161,7 +161,14 @@ a {
   }
 }
 
+.blog-posts li {
+  list-style-type: none;
+}
+
 .container.team {
+  h1 {
+    margin: 1em 0;
+  }
   .member {
     margin-top: 2em;
     margin-left: auto;

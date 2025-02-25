@@ -1,12 +1,9 @@
 {{ define "main" }}
+
+{{ partial "hero.html" . }}
+
 <div class="min-h-80 contact-form">
   <div class="container">
-    <hgroup>
-      {{ partial "breadcrumbs.html" . }}
-      <h1>{{ .Title }}</h1>
-      <h2>{{ .Description }}</h2>
-    </hgroup>
-
     {{ .Content }}
 
     <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xgegzdjz"

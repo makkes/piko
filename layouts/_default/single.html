@@ -1,8 +1,17 @@
 {{ define "main" }}
+
+<section class="hero list" style="background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url('/images/sergiu-valena-_Drvb_c_72Y-unsplash.jpg');">
+  <header class="container">
+    <hgroup>
+      <h1>{{ .Title }}</h1>
+      <h2>{{ .Description }}</h2>
+    </hgroup>
+  </header>
+</section>
+
 <div class="container">
   <hgroup>
-    {{ partial "breadcrumbs.html" . }}
-    <h1>{{ .Title }}</h1>
     {{- partial "post_meta.html" . -}}
     <p>{{ .Description }}</p>
   </hgroup>
